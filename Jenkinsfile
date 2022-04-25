@@ -31,7 +31,6 @@ pipeline {
             }
             steps {
                 sh '''
-                sudo rm -rf /var/lib/jenkins/workspace/testcicd/cicdtest
                 git clone https://github.com/dongjun3/cicdtest
                 cd cicdtest
                 sudo docker build -t kdj5854/testweb:${TAG} .
