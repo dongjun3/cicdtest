@@ -31,7 +31,7 @@ pipeline {
             }
             steps {
                 sh '''
-                git clone https://github.com/dongjun3/test
+                git clone https://github.com/dongjun3/test2
                 cd cicdtest
                 sudo docker build -t kdj5854/testweb:${TAG} .
                 sudo docker push kdj5854/testweb:${TAG}
