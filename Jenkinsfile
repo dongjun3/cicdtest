@@ -35,7 +35,9 @@ pipeline {
                 cd cicdtest
                 sudo docker build -t kdj5854/testweb:${TAG} .
                 sudo docker push kdj5854/testweb:${TAG}
-                '''
+		sudo sed -i 's@image: nginx@image: brian24/webtest:'"${TAG}"'@g' 
+                sudo kubectl apply -f nginx.yaml
+		'''
             }
             
         }
