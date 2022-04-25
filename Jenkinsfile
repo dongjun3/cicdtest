@@ -31,7 +31,7 @@ pipeline {
             }
             steps {
                 sh '''
-                git clone https://github.com/dongjun3/test2
+                git clone https://github.com/dongjun3/test3
                 sudo docker build -t kdj5854/testweb:${TAG} .
                 sudo docker push kdj5854/testweb:${TAG}
 		sudo sed -i 's@image: nginx@image: brian24/webtest:'"${TAG}"'@g' 
